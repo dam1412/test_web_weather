@@ -11,21 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const db = firebase.database();
 
     let triggered = false;
-    db.ref("n").on("value", (snapshot) => {
+    db.ref("Toa-do-hien-tai").on("value", (snapshot) => {
         const current_value = snapshot.val();
-        console.log(current_value);
-        if ((current_value === 0)) {
-            console.log('bbbb');
+        const n = current_value.n;
+        console.log(n);
+        if ((n === 40)) {
+            console.log('home');
         }
-        if (!triggered && (current_value === 1 || current_value === 2 || current_value === 3)) {
+        if ((n === 0)) {
             console.log('aaaaa');
+        }
+        if (!triggered && (n === 11 || n === 21 || n === 31)) {
+            console.log('forecasting');
             triggered = true;
             document.getElementById('nInput').value = 1;
             document.getElementById('weatherForm').submit();
 
-            db.ref("n").set(0).then(() => {
+            db.ref("Toa-do-hien-tai/n").set(0).then(() => {
                 console.log("Reset n to 0");
-                triggered = false; 
+                triggered = false;
             });
         }
 

@@ -701,3 +701,7 @@ main.clear {
     height: auto;
     width: auto;
 }
+/*  */
+.info:hover {
+    filter: invert(0.8);
+}
