@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+
+from django.contrib.auth import authenticate, login #newly added
 from django.template.loader import render_to_string
 from django.http import JsonResponse
 # Create your views here.
