@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if ((current_value === 0)) {
             console.log('start');
         }
+        if ((current_value === 2)) {
+            console.log('take off ready');
+        }
         if (!triggered && (current_value === 11)) {
             console.log('forecasting');
             triggered = true;

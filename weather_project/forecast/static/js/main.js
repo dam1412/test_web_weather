@@ -159,9 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inform board
   //// Inform status of UAV
   db.ref("n").on("value", (snapshot) => {
-    const data = snapshot.val();
-    if (data ) {
-      const status = data;
+    const status = snapshot.val();
+    if (status ) {
       if (status == 1) {  // Status 1: Not flying
 
       }
