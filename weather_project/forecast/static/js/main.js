@@ -66,8 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lastLng1 = parseFloat(snapshot.val().lng);
       // console.log("Toa-do-1: " + lastLat1 + ", " + lastLng1);
       lastMarker1 = L.marker([lastLat1, lastLng1], { icon: redIcon }).addTo(map);
-      if(lastPopupTurn==1)
-      {
+      if (lastPopupTurn == 1) {
         createPersistentPopup(lastMarker1, `<div>Lat1 = ${lastLat1}<br>Lng1 = ${lastLng1}<br></div>`);
       }
     });
@@ -76,8 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lastLng2 = parseFloat(snapshot.val().lng);
       // console.log("Toa-do-2: " + lastLat2 + ", " + lastLng2);
       lastMarker2 = L.marker([lastLat2, lastLng2], { icon: greenIcon }).addTo(map);
-      if(lastPopupTurn==1)
-      {
+      if (lastPopupTurn == 1) {
         createPersistentPopup(lastMarker2, `<div>Lat2 = ${lastLat2}<br>Lng2 = ${lastLng2}<br></div>`);
       }
     });
@@ -86,8 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       lastLng3 = parseFloat(snapshot.val().lng);
       // console.log("Toa-do-3: " + lastLat3 + ", " + lastLng3);
       lastMarker3 = L.marker([lastLat3, lastLng3], { icon: blueIcon }).addTo(map);
-      if(lastPopupTurn==1)
-      {
+      if (lastPopupTurn == 1) {
         createPersistentPopup(lastMarker3, `<div>Lat3 = ${lastLat3}<br>Lng3 = ${lastLng3}<br></div>`);
       }
     });
@@ -161,12 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inform board
   //// Inform status of UAV
-  db.ref("Toa-do-hien-tai").on("value", (snapshot) => {
+  db.ref("n").on("value", (snapshot) => {
     const data = snapshot.val();
-    const lat = data.lat_cur;
-    const lng = data.lng_cur;
-    if (data && data.n) {
-      const status = data.n;
+    if (data ) {
+      const status = data;
       if (status == 1) {  // Status 1: Not flying
 
       }
@@ -212,6 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             background: "linear-gradient(to right,rgb(176, 18, 0))",
           },
         }).showToast();
+        db.ref("n").set(100);
       }
       if (status == 20) { // Status 20: Reached point 2
         Toastify({
@@ -226,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             background: "linear-gradient(to right,rgb(0, 176, 50))",
           },
         }).showToast();
+        db.ref("n").set(100);
       }
       if (status == 30) { // Status 30: Reached point 3
         Toastify({
@@ -240,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             background: "linear-gradient(to right,rgb(13, 28, 189))",
           },
         }).showToast();
+        db.ref("n").set(100);
       }
       if (status == 40) { // Status 40: Back home
         Toastify({
@@ -252,6 +250,21 @@ document.addEventListener('DOMContentLoaded', () => {
           stopOnFocus: true,
           style: {
             background: "linear-gradient(to right,rgb(170, 11, 112))",
+          },
+        }).showToast();
+        db.ref("n").set(100);
+      }
+      if (status == 11) { // Status 11: Forecasting
+        Toastify({
+          text: "Forecasting has done",
+          duration: 2000,
+          newWindow: true,
+          close: true,
+          gravity: "top",
+          position: "center",
+          stopOnFocus: true,
+          style: {
+            background: "linear-gradient(to right,rgb(33, 176, 247), rgb(218, 246, 40))",
           },
         }).showToast();
       }

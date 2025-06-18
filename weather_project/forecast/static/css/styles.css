@@ -285,7 +285,7 @@ body.dark .switch::before {
     height: 100vh;
     width: 100vw;
 } */
-
+/* Weather html */
 main {
     position: absolute;
     /* top: 50%;
@@ -602,7 +602,7 @@ main.clear {
     width: 100%;
 }
 
-/*  */
+/* MAP HTML*/
 #map {
     display: flex;
     height: 85vh;
@@ -712,13 +712,7 @@ main.clear {
     filter: invert(0.8);
 }
 
-/* .text-content {
-    position: relative;
-    font-size: 30px;
-    font-weight: 500;
-    color: var(--text-color);
-    padding: 8px 40px;
-} */
+/* INDEX HTML*/
 
 .hero {
     position: relative;
