@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if ((n === 0)) {
             console.log('aaaaa');
         }
-        if (!triggered && (n === 11 || n === 21 || n === 31)) {
+        if (!triggered && (n === 12 || n === 22 || n === 32)) {
             console.log('forecasting');
             triggered = true;
             document.getElementById('nInput').value = 1;

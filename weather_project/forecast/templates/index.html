@@ -3,5 +3,27 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-    <div class="text">Home</div>
+{% load static %}
+<!-- <div class="text">Home</div> -->
+<!-- <div class="text-content">Damne</div> -->
+<div class="hero">
+    <div class="text-content">Home</div>
+    <div class="content">
+        <h1 class="anim">UAV Weather<br>Forecasting Web</h1>
+        <div class="anim author">
+            <span class="name">Lam Nguyen Huu Dam</span>
+            <span class="id">21146544</span>
+        </div>
+        <div class="anim author">
+            <span class="name">Doan Ngoc Minh Huy</span>
+            <span class="id">21146550</span>
+        </div>
+        <div class="anim author">
+            <span class="name">Tran Quoc Trung</span>
+            <span class="id">21146346</span>
+        </div>
+    </div>
+
+    <img src="{% static 'img/UAV-pic.png' %}" class="feature-img anim" />
+</div>
 {% endblock %}

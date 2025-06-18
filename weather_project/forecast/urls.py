@@ -5,5 +5,5 @@ urlpatterns=[
     path('', views.index, name='index'),
     path('weather/',views.weather_view, name='weather'),
     path('map/', views.map_view, name='map'),
-    path('dashboard/', views.dashboard, name='dashboard'),
+    # path('dashboard/', views.dashboard, name='dashboard'),
 ]

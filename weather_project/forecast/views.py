@@ -243,11 +243,11 @@ def index(request):
     return render(request,'index.html')
 def map_view(request):
     return render(request,'map.html')
-def dashboard(request):
-    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-        html = render_to_string('dashboard.html', request=request)
-        return JsonResponse({'html': html})
-    return render(request, 'base.html')
+# def dashboard(request):
+#     if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+#         html = render_to_string('dashboard.html', request=request)
+#         return JsonResponse({'html': html})
+#     return render(request, 'base.html')
 # def map_view(request):
 #     if request.headers.get('x-requested-with') == 'XMLHttpRequest':
 #         html = render_to_string('map.html', request=request)
