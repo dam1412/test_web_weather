@@ -724,7 +724,7 @@ main.clear {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    background-image: url('../img/background.jpeg');
+    background-image: url('../img/background.jpg');
 }
 
 .hero .text-content {
@@ -743,7 +743,7 @@ main.clear {
 
 .hero .content h1 {
     font-size: 70px;
-    color: #0b0101;
+    color: var(--text-color);
     /* margin-bottom: 20px; */
 }
 
@@ -759,7 +759,7 @@ main.clear {
     margin-top: 30px;
     margin-left: 50px;
     font-size: 30px;
-    color: #0b0101;
+    color: var(--text-color);
     animation-delay: 1.5s;
     max-width: 500px;
 }
