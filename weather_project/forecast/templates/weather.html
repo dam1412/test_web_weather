@@ -48,17 +48,17 @@
                     <p class="status">
                         <b>Status:</b>&nbsp;<span class="status_str">{{ status }}</span>
                         <span class="status_emoji">
-                        {% if status == "Tốt" %}
+                        {% if status == "Good" %}
                         &#129392;
-                        {% elif status == "Vừa phải" %}
+                        {% elif status == "Moderate" %}
                         &#128578;
-                        {% elif status == "Không tốt cho người nhạy cảm" %}
+                        {% elif status == "Unhealthy for Sensitive Groups" %}
                         &#129319;
-                        {% elif status == "Không tốt cho sức khỏe" %}
+                        {% elif status == "Unhealthy" %}
                         &#129314;
-                        {% elif status == "Rất không tốt cho sức khỏe" %}
+                        {% elif status == "Very Unhealthy" %}
                         &#128545;
-                        {% elif status == "Nguy hiểm" %}
+                        {% elif status == "Hazardous" %}
                         &#128128;
                         {% else %}
                         &#10067;
