@@ -26,7 +26,7 @@ BASE_URL='https://api.openweathermap.org/data/2.5/' #base URL for making API req
 firebaseURL="https://bme680-1-63c67-default-rtdb.asia-southeast1.firebasedatabase.app/bme680/latest.json"
 locationURL="https://map-1-b0eae-default-rtdb.asia-southeast1.firebasedatabase.app/Toa-do-hien-tai.json"
 aqiURL="https://bme680-1-63c67-default-rtdb.asia-southeast1.firebasedatabase.app/pm25/latest.json"
-model_dir = r"weather_project\forecast\Model_weather\Model_weather"
+model_dir = r"weather_project\forecast\Model_weather"
 
 
 #1. Fetch Current Weather Data
