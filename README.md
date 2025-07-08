@@ -7,7 +7,7 @@
 -> choose New -> paste the warning path -> press OK until all windows closed
 5. pipenv install
 ## Development
-1. pipenv run weather_server
+1. pipenv run weather_test
 3. Ctrl + Click the server's link (eg: https://2870.3.1.2:6782/)
 ## Add new package
 1. pipenv install <package-name> 
